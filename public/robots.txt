@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /geo
+Allow: /services
+Allow: /advantages
+Allow: /news
+Allow: /contact
+Allow: /news/*
+
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://www.souke-tech.com/sitemap.xml
