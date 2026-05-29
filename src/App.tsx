@@ -14,7 +14,7 @@ import Contact from "@/pages/Contact";
 export default function App() {
   return (
     <HelmetProvider>
-      <Router>
+      <Router basename="/souke">
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">
