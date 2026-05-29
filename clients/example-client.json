@@ -1,0 +1,26 @@
+{
+  "companyName": "示例科技有限公司",
+  "companyNameEn": "Example Tech Co., Ltd.",
+  "tagline": "让 AI 替您的品牌说话",
+  "domain": "example-tech",
+  "githubRepo": "qcqe/example-tech-website",
+  "logo": {
+    "textColor": "#00B4D8",
+    "bgColor": "#03045E"
+  },
+  "contact": {
+    "phone": "138-0000-0000",
+    "email": "contact@example-tech.com",
+    "address": "北京市朝阳区科技园"
+  },
+  "services": [
+    "GEO 优化服务",
+    "AI 搜索可见性提升",
+    "品牌认知优化",
+    "结构化数据工程"
+  ],
+  "social": {
+    "wechat": "example_tech",
+    "linkedin": "example-tech"
+  }
+}

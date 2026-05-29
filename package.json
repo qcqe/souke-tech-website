@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "check": "tsc -b --noEmit"
+    "check": "tsc -b --noEmit",
+    "generate": "node scripts/generate-website.js",
+    "deploy": "node scripts/deploy-website.js"
   },
   "dependencies": {
     "@types/cors": "^2.8.19",
