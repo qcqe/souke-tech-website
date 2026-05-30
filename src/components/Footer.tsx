@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { MapPin, Phone, Mail } from 'lucide-react'
 
 const quickLinks = [
   { label: '首页', href: '/' },
-  { label: '公司介绍', href: '#about' },
-  { label: '服务介绍', href: '#services' },
-  { label: '公司优势', href: '#advantages' },
-  { label: '公司新闻', href: '#news' },
-  { label: '联系我们', href: '#contact' },
+  { label: '公司介绍', href: '/#about' },
+  { label: '服务介绍', href: '/#services' },
+  { label: '公司优势', href: '/#advantages' },
+  { label: '公司新闻', href: '/#news' },
+  { label: '联系我们', href: '/#contact' },
 ]
 
 const contactInfo = [
@@ -17,6 +17,22 @@ const contactInfo = [
 ]
 
 export default function Footer() {
+  const navigate = useNavigate()
+
+  const handleLinkClick = (href: string) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    navigate(href.split('#')[0])
+    setTimeout(() => {
+      const hash = href.split('#')[1]
+      if (hash) {
+        const element = document.getElementById(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }
+    }, 100)
+  }
+
   return (
     <footer className="bg-[#03045e] text-white">
       <div className="container mx-auto px-4 py-16">
@@ -38,12 +54,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    to={link.href}
+                  <button
+                    onClick={() => handleLinkClick(link.href)}
                     className="text-sm text-[#90e0ef]/70 hover:text-white transition-colors"
                   >
                     {link.label}
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>
